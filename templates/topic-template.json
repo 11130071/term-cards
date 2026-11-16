@@ -1,0 +1,19 @@
+{
+  "slug": "your-slug",
+  "title_zh": "主題中文名稱",
+  "title_en": "Topic English Title",
+  "description": "一句話說明這個主題收錄哪些情境的術語。",
+  "updated": "YYYY-MM-DD",
+  "terms": [
+    {
+      "term": "TERM",
+      "full": "Full English name (abbreviations only; delete this field otherwise)",
+      "zh": "台灣常用中文譯名",
+      "explain": "一句白話解釋，40 字以內。",
+      "example": "An English example sentence that contains TERM itself.",
+      "example_zh": "例句的台灣繁體中文翻譯。",
+      "note": "選填：易混淆的詞、單位或注意事項，60 字以內。",
+      "related": []
+    }
+  ]
+}

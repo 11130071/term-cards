@@ -1,0 +1,130 @@
+{
+  "slug": "network",
+  "title_zh": "網路",
+  "title_en": "Networking",
+  "description": "網管工作與網路課程常見的術語。",
+  "updated": "2026-11-16",
+  "terms": [
+    {
+      "term": "IP Address",
+      "zh": "IP 位址",
+      "explain": "網路上用來識別每台裝置的位址，資料靠它找到目的地。",
+      "example": "Check the IP address of the printer; it should be 192.168.1.50.",
+      "example_zh": "檢查一下印表機的 IP 位址，應該是 192.168.1.50。",
+      "note": "IPv4 寫成四組 0～255 的數字，例如 192.168.1.10；IPv6 位址較長，用十六進位表示。",
+      "related": ["MAC Address", "Subnet Mask", "DHCP"]
+    },
+    {
+      "term": "MAC Address",
+      "zh": "MAC 位址、實體位址",
+      "explain": "網路卡出廠時就有的硬體位址，區域網路內用它辨識裝置。",
+      "example": "Add the laptop's MAC address to the Wi-Fi allowlist.",
+      "example_zh": "把這台筆電的 MAC 位址加到 Wi-Fi 的允許清單。",
+      "note": "MAC 是 Media Access Control 的縮寫，共 48 位元，常寫成 6 組十六進位數字。",
+      "related": ["IP Address", "Switch"]
+    },
+    {
+      "term": "Router",
+      "zh": "路由器",
+      "explain": "在不同網路之間轉送封包，替資料選擇前往目的地的路徑。",
+      "example": "Restart the router if every device in the office loses Internet access.",
+      "example_zh": "如果辦公室裡所有裝置都上不了網，就重新啟動路由器。",
+      "note": "家用「無線路由器」通常同時具備路由器、交換器和無線基地台的功能。",
+      "related": ["Switch", "Gateway", "NAT"]
+    },
+    {
+      "term": "Switch",
+      "zh": "交換器",
+      "explain": "連接同一個區域網路內的裝置，依 MAC 位址把資料送到正確的連接埠。",
+      "example": "Plug the new access point into port 8 on the switch.",
+      "example_zh": "把新的無線基地台接到交換器的第 8 個連接埠。",
+      "note": "交換器負責同一個網路內的轉送，路由器負責不同網路之間；管理型交換器可以設定 VLAN。",
+      "related": ["Router", "MAC Address", "VLAN"]
+    },
+    {
+      "term": "Gateway",
+      "zh": "閘道、閘道器",
+      "explain": "裝置要連到其他網路時，資料先送去的出入口，通常是路由器。",
+      "example": "Set the default gateway to 192.168.1.1, or the PC can't reach the Internet.",
+      "example_zh": "把預設閘道設成 192.168.1.1，不然這台電腦連不上網際網路。",
+      "note": "電腦網路設定中的「預設閘道」（default gateway）就是它，家中通常是路由器的 IP。",
+      "related": ["Router", "Subnet Mask"]
+    },
+    {
+      "term": "DNS",
+      "full": "Domain Name System",
+      "zh": "網域名稱系統",
+      "explain": "把網域名稱轉換成 IP 位址的系統，就像網路的電話簿。",
+      "example": "If DNS fails, websites won't load by name, but pinging 8.8.8.8 still works.",
+      "example_zh": "如果 DNS 故障，用網址開不了網站，但 ping 8.8.8.8 還是會通。",
+      "note": "常見的公開 DNS：Google 8.8.8.8、Cloudflare 1.1.1.1。",
+      "related": ["IP Address", "DHCP"]
+    },
+    {
+      "term": "Bandwidth",
+      "zh": "頻寬",
+      "explain": "網路連線每秒最多能傳輸的資料量，常用 Mbps 表示。",
+      "example": "We upgraded the office bandwidth to 500 Mbps because video calls kept freezing.",
+      "example_zh": "因為視訊會議一直卡住，我們把辦公室的頻寬升級到 500 Mbps。",
+      "note": "Mbps 的 b 是位元（bit），MB/s 的 B 是位元組（byte），1 位元組 = 8 位元。",
+      "related": ["Latency"]
+    },
+    {
+      "term": "Latency",
+      "zh": "延遲",
+      "explain": "資料從送出到抵達對方所花的時間，通常以毫秒（ms）表示。",
+      "example": "High latency can make video calls feel laggy even when the bandwidth looks fine.",
+      "example_zh": "即使頻寬看起來足夠，延遲太高還是會讓視訊通話不順暢。",
+      "note": "頻寬像水管多粗，延遲像水流多久才到；頻寬大不代表延遲低。",
+      "related": ["Bandwidth"]
+    },
+    {
+      "term": "Subnet Mask",
+      "zh": "子網路遮罩",
+      "explain": "用來區分 IP 位址中「網路部分」和「主機部分」的數字。",
+      "example": "The subnet mask is 255.255.255.0, so hosts range from 192.168.1.1 to 192.168.1.254.",
+      "example_zh": "子網路遮罩是 255.255.255.0，所以主機位址範圍是 192.168.1.1 到 192.168.1.254。",
+      "note": "255.255.255.0 也可以寫成 /24，代表前 24 個位元是網路部分。",
+      "related": ["IP Address", "Gateway"]
+    },
+    {
+      "term": "DHCP",
+      "full": "Dynamic Host Configuration Protocol",
+      "zh": "動態主機設定協定",
+      "explain": "自動分配 IP 位址、子網路遮罩、閘道和 DNS 給裝置的協定。",
+      "example": "The DHCP server ran out of addresses, so new laptops couldn't join the network.",
+      "example_zh": "DHCP 伺服器的位址已經分配完了，所以新的筆電連不上網路。",
+      "note": "印表機、伺服器通常設定固定 IP，或在 DHCP 中保留位址，避免位址變動。",
+      "related": ["IP Address", "Subnet Mask", "Gateway", "DNS"]
+    },
+    {
+      "term": "NAT",
+      "full": "Network Address Translation",
+      "zh": "網路位址轉譯、網路位址轉換",
+      "explain": "讓多台使用私有 IP 的裝置，共用一個公有 IP 連上網際網路。",
+      "example": "Because of NAT, the camera at 192.168.1.20 can't be reached from outside without port forwarding.",
+      "example_zh": "因為有 NAT，位於 192.168.1.20 的攝影機沒有設定通訊埠轉發，就無法從外部連線。",
+      "note": "私有 IP 範圍：10.x.x.x、172.16～172.31.x.x、192.168.x.x，不能直接在網際網路上使用。",
+      "related": ["IP Address", "Router"]
+    },
+    {
+      "term": "VLAN",
+      "full": "Virtual Local Area Network",
+      "zh": "虛擬區域網路",
+      "explain": "在同一台交換器上，用設定把網路切成多個彼此隔離的區域網路。",
+      "example": "Put the guest Wi-Fi on VLAN 20 so visitors can't access the file server.",
+      "example_zh": "把訪客 Wi-Fi 放在 VLAN 20，這樣訪客就無法存取檔案伺服器。",
+      "note": "不同 VLAN 之間預設不能互通，需要透過路由器或 L3 交換器轉送。",
+      "related": ["Switch", "Router"]
+    },
+    {
+      "term": "MTU",
+      "full": "Maximum Transmission Unit",
+      "zh": "最大傳輸單元",
+      "explain": "網路介面一次能傳送的最大封包大小，單位是位元組。",
+      "example": "The VPN kept dropping large packets until we lowered the MTU to 1400.",
+      "example_zh": "VPN 的大封包一直被丟掉，直到我們把 MTU 調降到 1400 才恢復正常。",
+      "note": "乙太網路的 MTU 通常是 1500 位元組；PPPoE 撥接常見 1492。"
+    }
+  ]
+}

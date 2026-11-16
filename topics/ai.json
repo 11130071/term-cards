@@ -1,0 +1,153 @@
+{
+  "slug": "ai",
+  "title_zh": "人工智慧",
+  "title_en": "Artificial Intelligence",
+  "description": "機器學習與生成式 AI 課程、工具文件中常見的術語。",
+  "updated": "2026-11-16",
+  "terms": [
+    {
+      "term": "AI",
+      "full": "Artificial Intelligence",
+      "zh": "人工智慧",
+      "explain": "讓電腦模仿人類學習、推理與判斷等能力的技術領域。",
+      "example": "Our team uses AI to sort customer emails by topic.",
+      "example_zh": "我們團隊用 AI 依主題分類客戶的電子郵件。",
+      "note": "是很廣的領域，機器學習是其中一種方法，深度學習又是機器學習的一種。",
+      "related": ["Machine Learning", "Deep Learning"]
+    },
+    {
+      "term": "Machine Learning",
+      "zh": "機器學習",
+      "explain": "讓電腦從資料中找出規律，而不是由人逐條寫規則。",
+      "example": "We used machine learning to predict which customers might cancel their subscriptions.",
+      "example_zh": "我們用機器學習預測哪些客戶可能會取消訂閱。",
+      "note": "縮寫 ML。主要分為監督式學習、非監督式學習與強化學習。",
+      "related": ["AI", "Deep Learning", "Training Data"]
+    },
+    {
+      "term": "Model",
+      "zh": "模型",
+      "explain": "從資料中學習後，能根據輸入做出預測或產生內容的系統。",
+      "example": "We retrained the model after adding six months of new sales records.",
+      "example_zh": "我們加入六個月的新銷售紀錄後，重新訓練了模型。",
+      "related": ["Training Data", "Parameter", "Inference"]
+    },
+    {
+      "term": "Training Data",
+      "zh": "訓練資料",
+      "explain": "用來讓模型學習的資料，資料品質會直接影響模型表現。",
+      "example": "The model performs poorly on night photos because the training data contained very few of them.",
+      "example_zh": "模型對夜間照片的表現很差，因為訓練資料中這類照片很少。",
+      "note": "資料通常分成訓練集、驗證集和測試集，測試集不能拿來訓練。",
+      "related": ["Model", "Overfitting"]
+    },
+    {
+      "term": "Deep Learning",
+      "zh": "深度學習",
+      "explain": "使用多層類神經網路的機器學習方法，擅長處理影像、語音與文字。",
+      "example": "Deep learning made image recognition accurate enough for real products.",
+      "example_zh": "深度學習讓影像辨識準確到足以用在實際產品上。",
+      "related": ["Machine Learning", "Neural Network"]
+    },
+    {
+      "term": "Neural Network",
+      "zh": "類神經網路、神經網路",
+      "explain": "由許多層「神經元」互相連接組成的模型，靈感來自人腦結構。",
+      "example": "We added a dropout layer to the neural network to reduce overfitting.",
+      "example_zh": "我們在類神經網路中加入 dropout 層來減少過度擬合。",
+      "related": ["Deep Learning", "Parameter", "Overfitting"]
+    },
+    {
+      "term": "Parameter",
+      "zh": "參數",
+      "explain": "模型在訓練中自動調整的數值，決定模型如何把輸入變成輸出。",
+      "example": "Larger models have more parameters, so they need more memory to run.",
+      "example_zh": "模型越大、參數越多，執行時就需要越多記憶體。",
+      "note": "學習率這類由人事先設定的值叫「超參數」（hyperparameter），不是訓練學到的。",
+      "related": ["Model", "Neural Network", "Fine-tuning"]
+    },
+    {
+      "term": "Overfitting",
+      "zh": "過度擬合、過擬合",
+      "explain": "模型把訓練資料背得太熟，遇到新資料時表現反而變差。",
+      "example": "Accuracy is high on training data but low on the test set, a classic sign of overfitting.",
+      "example_zh": "訓練資料上的準確率很高，測試集卻很低，這是典型的過度擬合。",
+      "note": "常見對策：增加訓練資料、資料擴增、dropout、提早停止訓練。",
+      "related": ["Training Data", "Neural Network"]
+    },
+    {
+      "term": "Inference",
+      "zh": "推論",
+      "explain": "用訓練好的模型處理新的輸入並產生結果的過程。",
+      "example": "We run inference on the edge device so the photos never leave the factory.",
+      "example_zh": "我們在邊緣裝置上執行推論，這樣照片就不會離開工廠。",
+      "note": "訓練是讓模型學習，推論是使用學好的模型；兩者需要的運算資源差很多。",
+      "related": ["Model"]
+    },
+    {
+      "term": "LLM",
+      "full": "Large Language Model",
+      "zh": "大型語言模型",
+      "explain": "用大量文字訓練、能理解與產生自然語言的模型。",
+      "example": "We use an LLM to draft replies, but a person checks every answer before sending.",
+      "example_zh": "我們用 LLM 草擬回覆，但每則回答送出前都由人檢查。",
+      "note": "ChatGPT、Claude、Gemini 都是以 LLM 為基礎的產品。",
+      "related": ["Token", "Prompt", "Hallucination"]
+    },
+    {
+      "term": "Token",
+      "zh": "詞元、token",
+      "explain": "語言模型處理文字的基本單位，可能是一個字、一個詞或詞的一部分。",
+      "example": "Long documents use more tokens, so the API cost goes up.",
+      "example_zh": "文件越長，用掉的詞元越多，API 費用也會跟著增加。",
+      "note": "輸入長度上限與 API 計費通常以 token 數計算；中文一個字不一定等於一個 token。",
+      "related": ["LLM"]
+    },
+    {
+      "term": "Prompt",
+      "zh": "提示詞、提示",
+      "explain": "使用者輸入給 AI 模型的指令或問題，會影響產生的結果。",
+      "example": "Add examples to the prompt so the model follows the output format.",
+      "example_zh": "在提示詞裡加入範例，讓模型照著指定的輸出格式回答。",
+      "note": "設計與調整提示詞的技巧稱為「提示工程」（prompt engineering）。",
+      "related": ["LLM"]
+    },
+    {
+      "term": "Hallucination",
+      "zh": "幻覺",
+      "explain": "AI 產生看似合理、實際上錯誤或捏造的內容。",
+      "example": "The chatbot cited a paper that doesn't exist, a typical hallucination.",
+      "example_zh": "聊天機器人引用了一篇根本不存在的論文，這是典型的幻覺。",
+      "note": "降低幻覺的方法包括提供參考資料（例如 RAG），並要求模型註明來源。",
+      "related": ["LLM", "RAG"]
+    },
+    {
+      "term": "Embedding",
+      "zh": "嵌入向量、嵌入",
+      "explain": "把文字、圖片等轉成一串數字向量，意思相近的內容向量也相近。",
+      "example": "We store an embedding for each article so users can search by meaning.",
+      "example_zh": "我們為每篇文章存一個嵌入向量，讓使用者可以依語意搜尋。",
+      "note": "RAG 常用 embedding 找出與問題最相關的文件。",
+      "related": ["RAG"]
+    },
+    {
+      "term": "RAG",
+      "full": "Retrieval-Augmented Generation",
+      "zh": "檢索增強生成",
+      "explain": "先從資料庫找出相關文件，再交給語言模型根據內容回答。",
+      "example": "With RAG, the assistant answers from our internal manuals instead of guessing.",
+      "example_zh": "用了 RAG 之後，助理會根據我們的內部手冊回答，而不是用猜的。",
+      "note": "適合需要最新資料或內部資料的情境，也能降低幻覺。",
+      "related": ["LLM", "Embedding", "Hallucination", "Fine-tuning"]
+    },
+    {
+      "term": "Fine-tuning",
+      "zh": "微調",
+      "explain": "用特定領域的資料再訓練已訓練好的模型，讓它更適合某項任務。",
+      "example": "Fine-tuning on our support tickets helped the model use our product names correctly.",
+      "example_zh": "用我們的客服工單進行微調後，模型就能正確使用我們的產品名稱。",
+      "note": "微調會改變模型參數；RAG 不改模型，而是在提問時提供參考資料。",
+      "related": ["RAG", "Parameter"]
+    }
+  ]
+}
