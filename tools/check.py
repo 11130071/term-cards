@@ -465,7 +465,7 @@ def check_sensitive(report, where, field, text):
         if (str(addr) in PUBLIC_DNS or addr.is_private or addr.is_loopback or addr.is_link_local
                 or addr.is_multicast or addr.is_unspecified or addr.is_reserved or is_netmask(addr)):
             continue
-        report.error(where, "{} 出現公開 IP {}；例句只能用私有位址（192.168.x.x、10.x.x.x）或公開 DNS".format(field, addr))
+        report.error(where, "{} 出現公開 IP {}；例句只能用私有位址（192.168.x.x、10.x.x.x、172.16～172.31.x.x）或公開 DNS".format(field, addr))
 
     for m in EMAIL_RE.finditer(text):
         domain = m.group(1).lower()
